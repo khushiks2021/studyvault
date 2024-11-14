@@ -1,0 +1,269 @@
+/* Background Design */
+.development-page {
+  display: flex;
+  padding: 100px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f3f4f6, #ffffff);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Abstract Shapes */
+.development-page::before,
+.development-page::after,
+.development-page .circle,
+.development-page .circle-small {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 123, 255, 0.2);
+  animation: floating 6s ease-in-out infinite;
+}
+
+.development-page::before {
+  width: 300px;
+  height: 300px;
+  top: -150px;
+  right: -150px;
+  background: radial-gradient(circle at top left, #ff6b6b, #f3f4f6);
+  animation-delay: 1s;
+}
+
+.development-page::after {
+  width: 300px;
+  height: 300px;
+  bottom: -150px;
+  left: -150px;
+  background: radial-gradient(circle at bottom right, #74c0fc, #ffffff);
+}
+
+.development-page .circle {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  right: 10%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0));
+  z-index: 0;
+  opacity: 0.3;
+  animation-delay: 0.5s;
+}
+
+.development-page .circle-small {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0));
+}
+
+/* Additional Circles */
+.development-page .circle-small.one {
+  top: 10%;
+  left: 25%;
+  opacity: 0.2;
+  animation-delay: 2s;
+}
+
+.development-page .circle-small.two {
+  bottom: 20%;
+  right: 30%;
+  opacity: 0.4;
+  animation-delay: 1.5s;
+}
+
+.development-page .circle-small.three {
+  top: 60%;
+  right: 20%;
+  opacity: 0.3;
+  animation-delay: 0.7s;
+}
+
+/* Animation for Floating Shapes */
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 280px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  margin-right: 30px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 20px;
+  transition: all 0.3s ease;
+  z-index: 1; /* Ensure sidebar is above background shapes */
+}
+
+.sidebar:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  color: #495057;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.controls .btn {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-align: center; /* Center text within buttons */
+}
+
+.controls .btn:hover {
+  background-color: #f1f3f5;
+  border-color: #ced4da;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow on hover */
+}
+
+/* Content Section Styling */
+.content-section {
+  flex-grow: 1;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  color: #343a40;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section p {
+  font-size: 18px;
+  color: #6c757d;
+}
+
+.hero-section::after {
+  content: '';
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b6b, #74c0fc);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+/* Resource List Styling */
+.resources-section .resource-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Resource Item Styling for Square Boxes */
+.resource-item {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px; /* Fixed height for square boxes */
+  position: relative;
+}
+
+.resource-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Like Button Position and Styling */
+.like-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ffffff;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 50%;
+  padding: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.like-button.liked {
+  color: #ff0000;
+  border-color: #ff0000;
+}
+
+/* Metadata Styling */
+.metadata {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #888;
+  margin-top: 10px;
+}
+
+.metadata .pages,
+.metadata .comments {
+  background-color: #f1f3f5;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+/* Resource Actions Styling */
+.resource-actions {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.resource-actions .btn {
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.resource-actions .btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design for Two or Three Columns */
+@media (max-width: 1024px) {
+  .resources-section .resource-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .resources-section .resource-list {
+    grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
+  }
+}

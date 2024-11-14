@@ -1,0 +1,92 @@
+/* header.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); /* Import a cute font */
+
+/* Universal reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px; /* Adjust height as needed */
+  padding: 0 20px; /* Only horizontal padding to prevent shifting */
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-top: 3px solid #d1a3e7; /* Soft purple border on top */
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  color: #333333;
+  font-family: 'Pacifico', cursive; /* Apply the cute font */
+  text-decoration: none; /* Remove underline */
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.logo h1:hover {
+  border-color: #b39ddb; /* Purple underline on hover */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-links, .about-link {
+  font-size: 1rem;
+  color: #555555;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.main-links:hover, .about-link:hover {
+  color: #000000;
+  border-bottom: 2px solid #b39ddb; /* Purple underline on hover */
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-btn, .sign-up-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  background-color: #007BFF;
+  border: 2px solid #b39ddb; /* Purple border around buttons */
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.profile-btn:hover, .sign-up-btn:hover {
+  background-color: #0056b3;
+  border-color: #7e57c2; /* Darker purple border on hover */
+}
+
+.sign-up-btn {
+  margin: 0; /* Ensures no default margin is applied */
+}
+
+main {
+  margin-top: 70px; /* Adds spacing for the main content to prevent overlap with the fixed header */
+}

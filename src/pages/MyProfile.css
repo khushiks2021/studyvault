@@ -1,0 +1,187 @@
+/* MyProfile.css */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-page {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 80px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #555;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="file"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.edit-profile-button {
+  background-color: #28a745;
+}
+
+.save-profile-button {
+  background-color: #17a2b8;
+}
+
+.cancel-edit-button {
+  background-color: #dc3545;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.section h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background-color: #007bff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.downloaded-resource,
+.liked-resource,
+.uploaded-note {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.downloaded-resource:hover,
+.liked-resource:hover,
+.uploaded-note:hover {
+  background-color: #e9ecef;
+}
+
+.delete-resource-button,
+.delete-note-button {
+  background-color: #dc3545;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+.update-password-section input[type="password"] {
+  margin-bottom: 10px;
+}
